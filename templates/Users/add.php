@@ -19,6 +19,8 @@
                 <?php
                     echo $this->Form->control('name');
                     echo $this->Form->control('mail');
+                    echo $this->Form->control('profile.hobby');
+                    echo $this->Form->control('profile.age');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>
