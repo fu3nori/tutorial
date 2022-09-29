@@ -44,6 +44,12 @@ class UsersTable extends Table
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+        $this->hasOne('Profiles', [
+            'foreignKey' => 'users_id',
+            'joinType' => 'INNER',
+            'dependent' => true
+        ]);
+
     }
 
     /**
